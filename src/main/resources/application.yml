@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: AWS ParamStore Service
+  config:
+    import: 'aws-parameterstore:'
+cloud:
+  aws:
+    region:
+      static: us-east-1
+      auto: false
+    stack:
+      auto: false
+aws:
+   paramstore:
+     enabled: true
+     failFast: false
+     prefix: /g2pedconfig
+     name: 'paramstore'
+     profile-separator: '_'
