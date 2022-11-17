@@ -14,8 +14,11 @@ public class ParamsController {
 	@Value("${testparam}")
 	private String testParam;
 
+	@Value("${testsecure}")
+	private String secureParam;
+
 	@GetMapping(value = "/params")
 	public ResponseEntity<?> getParams(HttpServletRequest request) {
-		return ResponseEntity.status(HttpStatus.OK).body("Testparam: " + testParam);
+		return ResponseEntity.status(HttpStatus.OK).body("Testparam: " + testParam + " \nSecureparam: " + secureParam);
 	}
 }
